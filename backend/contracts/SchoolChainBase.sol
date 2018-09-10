@@ -113,9 +113,10 @@ contract SchoolChainBase is SchoolChainAccessControl {
         emit LecturerCreated(_lecturerAddress,lecturerId);
     }
 
-    // function _getDepartments() public returns (Department[]){
-    //     return (departments);
-    // }
+    function _getDepartment(uint _department) public returns (bytes32){
+        Department department  = departments[_department];
+        return (department.name);
+    }
 
     // function _getLevels() public returns (Level[]){
     //     return (levels);

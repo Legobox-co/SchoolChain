@@ -18,8 +18,17 @@
   font-size: 1.5em;
 }
 
+.App-marginned{
+  margin: 40px;
+}
+
 .App-intro {
   font-size: large;
+}
+
+.Buttons{
+  padding: 20px;
+  color: #fff;
 }
 
 @keyframes App-logo-spin {
