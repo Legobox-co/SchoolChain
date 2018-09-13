@@ -12,6 +12,10 @@
  *   },
  */
 
+var HDWalletProvider = require("truffle-hdwallet-provider");
+
+var mnemonic = "process identify panther tooth identify candy cloud orange gather group drift pioneer"
+
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
@@ -32,6 +36,12 @@ module.exports = {
       // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
       //          - function that returns a web3 provider instance (see below.)
       //          - if specified, host and port are ignored.
-    }
+    },
+    rinkeby: {
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/9f8170e2878642209dc78ae8f2671d53")
+      },
+      network_id: 3
+    }  
   }
 };

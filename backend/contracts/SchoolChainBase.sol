@@ -50,7 +50,7 @@ contract SchoolChainBase is SchoolChainAccessControl {
     // events and other things to know about
     event StudentCreated(address _student, uint256 studentID);
     event LecturerCreated(address _lecturer, uint256 lecturerID);
-    event DepartmentCreated(uint departmentId);
+    event DepartmentCreated(uint departmentId, bytes32 name);
     event LevelCreated(uint levelId);
 
 
@@ -77,7 +77,7 @@ contract SchoolChainBase is SchoolChainAccessControl {
         });
 
         uint departmentID = departments.push(dept) -1;
-        emit DepartmentCreated(departmentID);
+        emit DepartmentCreated(departmentID, dept.name);
         return (departmentID);
     }
 

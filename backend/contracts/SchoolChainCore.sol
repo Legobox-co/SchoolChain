@@ -39,7 +39,7 @@ import "./SchoolChainBase.sol";
 
 contract SchoolChainCore is SchoolChainBase {
 
-    constructor (address _proposedVCAddress) public {
-       vc  = msg.sender;
+    function SchoolChainCore (address _proposedVCAddress) public {
+       vc = msg.sender;
     }
 }

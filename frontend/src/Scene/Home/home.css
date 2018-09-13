@@ -11,3 +11,8 @@
 	border-radius: 5px;
 	overflow: hidden;
 }
+
+.App-department-list{
+	list-style: none;
+	font-size: 20px;
+}
