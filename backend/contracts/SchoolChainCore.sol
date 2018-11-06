@@ -34,12 +34,26 @@ includes the followings.
 
 // import from open zeppline
 // import "openzeppelin-solidity/contracts/math/SafeMath.sol";
-import "./SchoolChainBase.sol";
+import "./SchoolChainTransact.sol";
+/* import "./SchoolChainDemocracy.sol"; */
 
+contract SchoolChainCore is SchoolChainTransact {
 
-contract SchoolChainCore is SchoolChainBase {
+    constructor (
+      /* uint minimumQuorumForProposals,
+      uint minutesForDebate,
+      int marginOfVotesForMajority, */
+      address _proposedVCAddress
+    ) public {
+        // Assigning the vc of the school
+        vc = msg.sender;
 
-    function SchoolChainCore (address _proposedVCAddress) public {
-       vc = msg.sender;
+        /* changeVotingRules(minimumQuorumForProposals, minutesForDebate, marginOfVotesForMajority); */
+        // creating the levels of the school
+        // for (uint i=0; i < 5 ; i++) {
+        // // do something
+        //     _createLevel(SchoolChainCore.add(i));
+        // }
+
     }
 }

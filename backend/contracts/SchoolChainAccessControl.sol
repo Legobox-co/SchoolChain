@@ -1,32 +1,13 @@
 pragma solidity ^0.4.24;
 
+import "./SchoolChainStructs.sol";
 
-contract SchoolChainAccessControl {
+contract SchoolChainAccessControl is SchoolChainStructs {
 
-    struct Student {
-        bytes32 fullname;
-        address studentAddress;
-        uint departmentID;
-    }
-
-    // lecturers in the school mapping
-    struct Lecturer {
-        bytes32 fullname;
-        address lecturerAddress;
-        uint departmentID;
-    }
-
-    address[] public studentAccounts;
-    address[] public lecturerAccounts;
 
     // student who already are part of a department
     // mapping (address => uint256) student_with_departments;
-    mapping (address => Student) students;
-    mapping (address => Lecturer) lecturers;
-
-    mapping (address => uint) public lecturerIds;
-    mapping (address => uint) public studentIds;
-    mapping (address => uint) public departmentLeads;
+   
 
     address public vc;
     address public dean;
@@ -53,7 +34,7 @@ contract SchoolChainAccessControl {
         _;
     }
 
-    function setVC(address _newVC, address _formerVC) onlyVC{
+    function setVC(address _newVC, address _formerVC) public onlyVC {
         vc = _newVC;
         emit NewVC(vc);
     }

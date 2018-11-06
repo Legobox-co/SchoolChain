@@ -13,8 +13,6 @@ web3.eth.getAccounts().then(console.log);
 // } else {
 //     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 // }
-
-
 // let schoolChainAbi = env.abi;
 
 // let schoolChainAddress = env.address;
@@ -24,13 +22,8 @@ web3.eth.getAccounts().then(console.log);
 
 const defaultWeb3 = web3;
 
-// console.log(web3.eth);
-const schoolChainContract = new web3.eth.Contract(SchoolChainCore.abi, '0x4095b3692571ad87f9bcfec8787f0e710c6a9c6c');
-
-// const defaultAccount = web3.eth.defaultAccount;
-
-console.log(schoolChainContract)
-
+const schoolChainContract = new web3.eth.Contract(SchoolChainCore.abi, '0xd8c529f8018e0d7b5efd479394aa8854966c299a');
+// '0x50a555bb6640c3b3b05876c218d223f4031a5b94'
 const options = {
     contracts: [
       SchoolChainCore
@@ -38,4 +31,3 @@ const options = {
 }
 
 export {schoolChainContract, options, defaultWeb3};
-

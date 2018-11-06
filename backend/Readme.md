@@ -23,4 +23,7 @@ e.g Students to his department.
 we have to make the school keep the student Struct and the student's ID be stored in his department's struct, therefore it would be a map of the student ID to his department Struct. Stored on the SchoolChain base contract.
 
 
+## Pre-based Conditions
+The following are a set of conditions which can be agreed upon with respect to how the school contract would function.
 
+- Every department has 5 levels, each level has a school fees payment attached to it, this can be changed by placing the index of the level in a function to change the school fees value.

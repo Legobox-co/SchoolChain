@@ -16,3 +16,7 @@
 	list-style: none;
 	font-size: 20px;
 }
+
+.Dashb-tab-active{
+	color: rgb(33, 132, 255);
+}
